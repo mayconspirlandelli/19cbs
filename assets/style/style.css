@@ -1,0 +1,1134 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Popins", sans-serif;
+    color: #161616;
+  }
+  
+a {
+    color: #203E11;
+    text-decoration: none;
+  }
+  
+a:hover {
+    color: #A0BE91;
+    text-decoration: none;
+  }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header { 
+    background: #ffffff;
+    z-index: 997;
+    height: 90px;
+    box-shadow: 0px 10px 30px rgb(53 53 53 / 30%);
+}
+
+
+ .header .logo {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-family: "Montserrat Alternates", sans-serif;
+  }
+
+  
+.header .social-links {
+    margin: 0 0 0 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .social-links a {
+    transition: 0.3s;
+    line-height: 0;
+    margin-left: 15px;
+}
+
+.header .social-links a i {
+    line-height: 0;
+}
+
+@media (max-width: 992px) {
+    .header .social-links {
+        margin: 0 15px 0 0;
+    }
+}
+
+@media (max-width: 992px){
+    .header .logo {
+        font-size: 28px;
+    }
+}
+  
+
+/**
+* Desktop Navigation 
+*/
+.navbar {
+    padding: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 24px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #203E11;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.navbar a i, .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+  .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+    color: #A0BE91;
+}
+
+.navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 24px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+    min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+    padding: 10px 20px;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.navbar .dropdown ul a i {
+    font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+    color: #A0BE91;
+}
+
+.navbar .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+}
+
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+        left: -90%;
+    }
+    .navbar .dropdown .dropdown:hover > ul {
+        left: -100%;
+    }
+}
+  
+
+/**
+* Mobile Navigation 
+*/
+
+.mobile-nav-toggle {
+    color: #203E11;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+    color: #fff;
+}
+  
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+  
+    .navbar ul {
+        display: none;
+    }
+}
+
+.navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(45, 43, 70, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.navbar-mobile a, .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #203E11;
+}
+
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+    color: #A0BE91;
+}
+
+.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+    margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+    min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+    font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+    color: #A0BE91;
+}
+
+.navbar-mobile .dropdown > .dropdown-active {
+    display: block;
+}
+  
+/**
+* Botao de rolamento
+*/
+
+.bnt-rolar{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 30px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.link-rolar{
+    font-size: 40px;
+}
+
+@media (max-width: 991px){
+    .bnt-rolar{
+        margin: 20px;
+        transition: 0.3s;
+    }
+    .link-rolar{
+        font-size: 30px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+section{
+    overflow: hidden;
+}
+ 
+/* Section with background
+--------------------------------*/
+.section-bg {
+    background: #BBDEB2;
+}
+  
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+    height: auto;
+    padding-top: 40px;
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .hero {
+      height: auto;
+      padding-top: 50px;
+    }
+  }
+@media (min-width: 992px) {
+    .hero img{
+      padding-top: 50px;
+    }
+}
+@media (max-width: 991px) {
+    .hero img {
+      text-align: center;
+      padding-top: 40px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Sobre Section
+--------------------------------------------------------------*/
+
+.sobre{
+    height: auto;
+    position: relative;
+}
+
+.sobre .container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+  
+.sobre .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre .sobre-title h2{
+    text-align: center;
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.sobre .sobre-description p{
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sobre .sobre-description h4{
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700;
+    font-family: "Montserrat Alternates", sans-serif;;
+}
+
+@media (max-width: 991px) {
+    .sobre {
+      height: auto;
+      padding: 0px 15px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Chamados de Trabalhos Section
+--------------------------------------------------------------*/ 
+
+.trabalhos{
+    height: auto;
+    position: relative;
+}
+
+.trabalhos .container{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.trabalhos .trabalhos-title h2{
+    text-align: center;
+    font-weight: 600;
+}
+
+.trabalhos .row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.trabalhos .box-info{
+    width: 250px;
+    height: 120px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 8px;
+}
+
+.trabalhos .box-info p{
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+  
+.trabalhos .box-info .botao-info{
+    text-align: center;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+@media (max-width: 991px) {
+    .trabalhos {
+      width: auto;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Submissão de Trabalhos Section
+--------------------------------------------------------------*/ 
+
+.submissao {
+    height: auto;
+    position: relative;
+}
+
+.submissao .container {
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.submissao .submissao-title h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.submissao .row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submissao .submissao-filters {
+    list-style: none;
+    text-align: center;
+}
+
+.submissao .submissao-filters li {
+    cursor: pointer;
+    margin: 15px 15px 15px 0;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 19px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #2b5515;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.submissao .submissao-filters li:hover,
+.submissao .submissao-filters li.filter-active {
+    color: #58a233;
+}
+
+.submissao .submissao-filters li:last-child {
+    margin-right: 0;
+}
+
+.submissao .submissao-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submissao .submissao-item .submissao-description {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin: 10px 30px;
+}
+
+.submissao .submissao-item .submissao-description h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.submissao .submissao-item .submissao-description p {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.submissao .submissao-item .submissao-description s {
+    font-size: 17px;
+    opacity: 30%;
+
+}
+
+@media screen and (max-width:991px) {
+    .submissao .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .submissao .submissao-item {
+        position: relative;
+        overflow: hidden;
+        display: block;
+    }
+
+    .submissao .submissao-item .submissao-description {
+        margin-bottom: 30px;
+    }
+    
+    .submissao .submissao-item .submissao-description h5 {
+        font-size: 16px;
+    }
+    
+    .submissao .submissao-item .submissao-description p {
+        font-size: 16px;
+    }
+
+    .submissao .submissao-filters li{
+        font-size: 14px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Inscricoes Section
+--------------------------------------------------------------*/  
+
+.inscricoes{
+    height: auto;
+    position: relative;
+}
+
+.inscricoes .container{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.inscricoes .inscricoes-title h2{
+    text-align: center;
+    font-weight: 600;
+}
+
+.inscricoes .row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.inscricoes .box {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background: #eee;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+  
+.inscricoes .box h3 {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+  
+.inscricoes .box h4 {
+    font-size: 42px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: 20px;
+}
+  
+.inscricoes .box h4 sup {
+    font-size: 20px;
+    top: -15px;
+    left: -3px;
+}
+
+.inscricoes .box h4 span {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.inscricoes .box p{
+    font-size: 14px;
+    font-style: italic;
+}
+  
+.inscricoes .box .btn-wrap {
+    padding: 15px;
+    text-align: center;
+}
+  
+.inscricoes .box .btn-ins {
+    display: inline-block;
+    padding: 10px 40px 12px 40px;
+    border-radius: 4px;
+    background-color: #385E25;
+    font-size: 14px;
+    color:#fff;
+    font-weight: 400;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+}
+  
+.inscricoes .box .btn-ins:hover {
+    background-color: #A0BE91;
+    color: #161616;
+}
+
+@media (max-width: 991px) {
+    .inscricoes {
+      width: auto;
+    }
+    .inscricoes .box .btn-wrap{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .inscricoes .box .btn-ins{
+        font-size: 12px;
+        transition: 0.3s;
+    }
+}
+
+/*--------------------------------------------------------------
+# Palestrantes Section
+--------------------------------------------------------------*/  
+
+.palestrantes{
+    height: auto;
+    position: relative;
+}
+
+.palestrantes .container{
+    padding-top: 30px;
+}
+
+.palestrantes .palestrantes-title h2{
+    text-align: center;
+    font-weight: 600;
+}
+
+.palestrantes .row{
+    padding-top: 10px;
+}
+
+.palestrantes .palestrantes-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 25px 15px;
+}
+  
+.palestrantes .palestrantes-item .palestrantes-wrap {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    box-shadow: 1px 10px 8px rgba(0, 0, 0, 0.248);
+    border-radius: 10px;
+}
+  
+.palestrantes .palestrantes-item .palestrantes-wrap .palestrantes-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.palestrantes h3 {
+    color: #203E11;
+    font-size: 22px;
+}
+  
+.palestrantes h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.modal .modal-content{
+    padding: 10px 30px 10px 30px;
+}
+
+.modal .modal-header h3{
+    font-weight: 600;
+    font-size: 25px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.modal .modal-header button{
+    border: none;
+    font-weight: 600;
+    font-size: 25px;
+    color: red;
+    background-color: #fff;
+}
+
+.modal .modal-text{
+    padding-top: 10px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+    .palestrantes {
+      height: auto;
+    }
+    .palestrantes .palestrantes-item{
+        margin: 0;
+        padding: 5px 15px 30px 15px;
+        display: flex;
+        justify-content: center;
+    }
+    .palestrantes .palestrantes-wrap{
+        width: 250px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Programacao Section
+--------------------------------------------------------------*/ 
+
+.programacao{
+    height: auto;
+    position: relative;
+}
+
+.programacao .container{
+    padding-top: 30px;
+}
+
+.programacao .programacao-title h2{
+    text-align: center;
+    font-weight: 600;
+}
+
+.programacao .nav{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.programacao .nav-item{
+    width: 200px;
+    text-align: center;
+    background-color: #d1deca93;
+    margin: 2px;
+    border-radius: 6px;
+}
+
+.programacao .nav-link{
+    font-size: 17px;
+    color: #161616;
+    font-weight: 600;
+}
+
+.programacao .nav-link.active{
+    color: #fff;
+    background-color: #203E11;
+}
+
+/*.programacao .class{
+    display: flex;
+    justify-content: center;
+}
+
+.programacao .class a{
+    margin: 10px;
+    width: 500px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
+    border: 2px solid;
+    border-color: #0e2a4e;
+    border-radius: 20px;
+}
+
+.programacao .class a:hover{
+    background-color: #0e2a4e;
+    color: #fff;
+}*/
+
+.programacao .row{
+    margin-bottom: 40px;
+}
+
+.programacao .hora{
+    background: #203E11;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.programacao .programacao-info{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.programacao .info .info-title{
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 550;
+    cursor: pointer;
+    color: #161616;
+    transition: 0.3s;
+}
+
+.programacao .info .info-title i{
+    font-size: 14px;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.programacao .info .info-details p{
+    font-size: 16px;
+    margin-bottom: 0;
+    padding: 10px 0 0 40px;
+    text-align: justify;
+}
+
+.programacao .info .info-details table{
+    font-size: 15px;
+    display: block;
+    width: 80%;
+    margin-left: 37px;
+}
+
+.programacao .info .info-details table,td{
+    border: 1px solid;
+    border-color: #000;
+    background-color: #ffffffbb;
+}
+
+.programacao .info .info-details th{
+    border: 1px solid;
+    border-color: #000;
+    text-align: center;
+    background-color: #ffffff0c;
+}
+
+.programacao .info .info-details td{
+    text-align: justify;
+    padding: 10px 20px 10px 10px;
+    height: 30px;
+}
+
+.programacao .info .info-details a{
+    font-size: 15px;
+    margin-left: 37px;
+}
+
+.programacao .info .icon-show {
+    display: none;
+}
+  
+.programacao .info .collapsed {
+    color: #161616;
+}
+
+.programacao .collapsed:hover{
+    color: #385E25;
+}
+  
+.programacao .info .collapsed .icon-show {
+    display: inline-block;
+    transition: 0.6s;
+}
+  
+.programacao .info .collapsed .icon-close {
+    display: none;
+    transition: 0.6s;
+}
+
+@media (max-width: 991px) {
+    .programacao {
+      width: auto;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Ficha Técnica Section
+--------------------------------------------------------------*/ 
+
+.ficha{
+    height: auto;
+    position: relative;
+}
+
+.ficha .container{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.ficha .ficha-title h2{
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.ficha .row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ficha .info{
+    margin: 30px;
+}
+
+.ficha .info li{
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-right: 25px;
+}
+
+.ficha .info h4{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c5518;
+}
+
+.ficha .ficha-organizacao h4, .ficha-realizacao h4, .ficha-patrocinio  h4{
+    margin-bottom: 5px !important; 
+}
+
+.ficha .info img{
+    width: 230px;
+    margin: 10px;
+}
+
+.ficha .ficha-patrocinio img{
+    width: 200px;
+}
+
+@media screen and (max-width:991px) {
+    .ficha .row{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Normas Section
+--------------------------------------------------------------*/ 
+
+.normas{
+    height: auto;
+    position: relative;
+}
+
+.normas .container{
+    padding: 40px 0;
+}
+
+.normas .normas-title h2{
+    text-align: center;
+    font-weight: 600;
+}
+
+.normas .row{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.normas .paragraph{
+    margin-bottom: 20px;
+}
+
+.normas .paragraph p{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.normas .paragraph ul, .paragraph li{
+    font-size: 15px;
+    padding: 4px 0;
+    margin: 0 50px;
+}
+
+.normas .paragraph a{
+    font-weight: 600;
+    color:#38910b;
+}
+
+.normas .paragraph a:hover{
+    color: #74986b;
+}
+
+.normas .paragraph .areas{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.normas .paragraph h3{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.normas .botao-artigo{
+    display: flex;
+    justify-content: center;
+}
+
+.normas .btn{
+    font-weight: 700;
+    font-size: 20px;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: #fff !important;
+    background-color: #203E11;
+    border-color: #203E11;
+    width: 50%;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+}
+
+.normas .btn:hover{
+    background-color: #38910b;
+    border-color: #38910b;
+}
+
+@media (max-width: 991px) {
+    .normas {
+      width: auto;
+    }
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+    color: #fff;
+    background-color: #41712b;
+    height: auto;
+    position: relative;
+}
+ 
+.footer .container{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.footer .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+}
+
+.footer .credits {
+    padding-top: 5px;
+}
+
+.footer a{
+    color: #fff;
+    font-weight: 600;
+}
