@@ -986,12 +986,16 @@ section{
 }
 
 .ficha .info img{
-    width: 230px;
+    width: 300px;
     margin: 10px;
 }
 
+.ficha .ficha-organizacao img{
+    width: 400px;
+}
+
 .ficha .ficha-patrocinio img{
-    width: 200px;
+    width: 300px;
 }
 
 @media screen and (max-width:991px) {
