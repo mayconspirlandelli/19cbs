@@ -453,6 +453,65 @@ section{
 
 
 /*--------------------------------------------------------------
+# Chamados de HACKATHON Section
+--------------------------------------------------------------*/ 
+
+.hackathon{
+    height: auto;
+    position: relative;
+    background-color: #2b5515;
+    ;
+}
+
+.hackathon .container{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.hackathon .hackathon-title h2{
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.hackathon .row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hackathon .box-info{
+    width: 250px;
+    height: 120px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 8px;
+}
+
+.hackathon .box-info p{
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+  
+.hackathon .box-info .botao-info{
+    text-align: center;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+@media (max-width: 991px) {
+    .hackathon {
+      width: auto;
+    }
+}
+
+
+
+
+/*--------------------------------------------------------------
 # Submissão de Trabalhos Section
 --------------------------------------------------------------*/ 
 
